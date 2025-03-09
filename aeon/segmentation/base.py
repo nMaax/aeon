@@ -55,7 +55,7 @@ class BaseSegmenter(BaseSeriesEstimator):
         is 0, it is assumed each column is a time series and each row is a
         timepoint. i.e. the shape of the data is ``(n_timepoints,n_channels)``.
         ``axis == 1`` indicates the time series are in rows, i.e. the shape of the data
-        is ``(n_channels, n_timepoints)`. Each segmenter must specify the axis it
+        is ``(n_channels, n_timepoints)``. Each segmenter must specify the axis it
         assumes in the constructor and pass it to the base class.
     n_segments : int, default = 2
         Number of segments to split the time series into. If None, then the number of
@@ -137,7 +137,7 @@ class BaseSegmenter(BaseSeriesEstimator):
             a time series and each column is a time point. i.e. the shape of the data
             is ``(n_timepoints,n_channels)``.
             ``axis == 1`` indicates the time series are in rows, i.e. the shape of
-            the data is ``(n_channels, n_timepoints)`.``axis is None`` indicates
+            the data is ``(n_channels, n_timepoints)``.``axis is None`` indicates
             that the axis of X is the same as ``self.axis``.
 
         Returns
